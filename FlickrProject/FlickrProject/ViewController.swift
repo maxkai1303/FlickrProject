@@ -59,7 +59,11 @@ class ViewController: UIViewController {
         
         if segue.identifier == "showImage" {
             
-            let nextView = segue.destination as! SearchViewController
+            guard let tabBarController = segue.destination as? UITabBarController,
+            
+                  let nextView = tabBarController.viewControllers?[0] as? SearchViewController
+            
+            else { return }
             
             nextView.getSearchText = insertText.text!
             

@@ -29,7 +29,7 @@ struct Photo: Codable {
     
     var imageUrl: URL {
         
-        return URL(string:"https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_m.jpg")!
+        return URL(string:"https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret)_q.jpg")!
     }
 }
 

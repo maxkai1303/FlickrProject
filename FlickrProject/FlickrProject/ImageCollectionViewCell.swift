@@ -14,6 +14,9 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
     
+    @IBOutlet weak var likeBTN: UIButton!
+    
+    
     func setUi(item: Photo) {
         
         imageTitle.text = item.title
