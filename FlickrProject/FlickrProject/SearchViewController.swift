@@ -99,11 +99,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
-    @IBAction func likeBTN(_ sender: Any) {
-        
-        
-    }
-
+    var likeStatus: Status = .unlike
 }
 
 extension SearchViewController: UICollectionViewDataSource {
@@ -121,10 +117,33 @@ extension SearchViewController: UICollectionViewDataSource {
         
         cell.setUi(item: photo)
         
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        let saveImage = photos[indexPath.item]
+        
+        FavoritesData.shared.saveData(title: saveImage.title, image: "\(saveImage.imageUrl)")
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
+        
+        switch likeStatus {
+        
+        case .like:
+            
+            likeStatus = .unlike
+            cell.likeBTN.image(for: .disabled)
+            
+        case .unlike:
+            
+            likeStatus = .like
+            cell.likeBTN.image(for: .selected)
+        }
+        
+        
     }
 }
 
-/*
- API還沒回來重新建構 collectionView photos out of range
- */
+

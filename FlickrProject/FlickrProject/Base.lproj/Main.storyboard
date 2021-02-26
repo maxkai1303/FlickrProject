@@ -115,16 +115,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-Vv-1oQ">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-Vv-1oQ">
                                                     <rect key="frame" x="151.5" y="189.5" width="20.5" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20.5" id="htb-A2-Awb"/>
                                                         <constraint firstAttribute="height" constant="20.5" id="scg-dV-BsM"/>
                                                     </constraints>
                                                     <state key="normal" backgroundImage="heart" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="likeBTN:" destination="c7h-na-tkT" eventType="touchUpInside" id="leL-5K-jSf"/>
-                                                    </connections>
+                                                    <state key="disabled" image="heart" catalog="system"/>
+                                                    <state key="selected" image="heart.fill" catalog="system"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -288,6 +287,7 @@
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

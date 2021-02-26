@@ -16,7 +16,7 @@ extension Favorites {
         return NSFetchRequest<Favorites>(entityName: "Favorites")
     }
 
-    @NSManaged public var imageData: Data?
+    @NSManaged public var imageData: String?
     @NSManaged public var title: String?
 
 }

@@ -60,12 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450B32C225E8D5510017B61C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				450B32BB25E8D3360017B61C /* Favorites+CoreDataProperties.swift */,
+				450B32BA25E8D3360017B61C /* Favorites+CoreDataClass.swift */,
+				450B32BF25E8D35F0017B61C /* DataManager.swift */,
+				457E87FB25E646EC00F4D28F /* FlickrProject.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		457E87E625E646EC00F4D28F = {
 			isa = PBXGroup;
 			children = (
-				450B32BA25E8D3360017B61C /* Favorites+CoreDataClass.swift */,
-				450B32BB25E8D3360017B61C /* Favorites+CoreDataProperties.swift */,
-				450B32BF25E8D35F0017B61C /* DataManager.swift */,
+				450B32C225E8D5510017B61C /* CoreData */,
 				457E87F125E646EC00F4D28F /* FlickrProject */,
 				457E87F025E646EC00F4D28F /* Products */,
 				531CC7A09A3DB75CB6B0FA1E /* Pods */,
@@ -95,7 +104,6 @@
 				457E87FE25E646EE00F4D28F /* Assets.xcassets */,
 				457E880025E646EE00F4D28F /* LaunchScreen.storyboard */,
 				457E880325E646EE00F4D28F /* Info.plist */,
-				457E87FB25E646EC00F4D28F /* FlickrProject.xcdatamodeld */,
 			);
 			path = FlickrProject;
 			sourceTree = "<group>";

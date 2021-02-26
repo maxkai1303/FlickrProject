@@ -8,6 +8,11 @@
 import UIKit
 import Kingfisher
 
+enum Status {
+    case like
+    case unlike
+}
+
 class ImageCollectionViewCell: UICollectionViewCell {
     
     
@@ -16,11 +21,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var likeBTN: UIButton!
     
-    
     func setUi(item: Photo) {
         
         imageTitle.text = item.title
         image.kf.setImage(with: item.imageUrl)
+        likeBTN.image(for: .disabled)
+        
     }
+    
     
 }
