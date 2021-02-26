@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450B32BC25E8D3360017B61C /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B32BA25E8D3360017B61C /* Favorites+CoreDataClass.swift */; };
+		450B32BD25E8D3360017B61C /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B32BB25E8D3360017B61C /* Favorites+CoreDataProperties.swift */; };
+		450B32C025E8D35F0017B61C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B32BF25E8D35F0017B61C /* DataManager.swift */; };
 		457E87F325E646EC00F4D28F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E87F225E646EC00F4D28F /* AppDelegate.swift */; };
 		457E87F525E646EC00F4D28F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E87F425E646EC00F4D28F /* SceneDelegate.swift */; };
 		457E87F725E646EC00F4D28F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E87F625E646EC00F4D28F /* ViewController.swift */; };
@@ -18,12 +21,15 @@
 		457E881225E653C100F4D28F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E881125E653C100F4D28F /* SearchViewController.swift */; };
 		457E881525E6541D00F4D28F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E881425E6541D00F4D28F /* ImageCollectionViewCell.swift */; };
 		457E881C25E69D7800F4D28F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E881B25E69D7800F4D28F /* Network.swift */; };
-		457E882025E6A29900F4D28F /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 457E881F25E6A29900F4D28F /* SwiftPackageProductDependency */; };
+		457E882025E6A29900F4D28F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 457E881F25E6A29900F4D28F /* Kingfisher */; };
 		718C09BA7EF74296929F7D1F /* Pods_FlickrProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2289B8E5DE631A603207C2EA /* Pods_FlickrProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2289B8E5DE631A603207C2EA /* Pods_FlickrProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		450B32BA25E8D3360017B61C /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataClass.swift"; sourceTree = "<group>"; };
+		450B32BB25E8D3360017B61C /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		450B32BF25E8D35F0017B61C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		457E87EF25E646EC00F4D28F /* FlickrProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457E87F225E646EC00F4D28F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457E87F425E646EC00F4D28F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457E882025E6A29900F4D28F /* BuildFile in Frameworks */,
+				457E882025E6A29900F4D28F /* Kingfisher in Frameworks */,
 				718C09BA7EF74296929F7D1F /* Pods_FlickrProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +63,9 @@
 		457E87E625E646EC00F4D28F = {
 			isa = PBXGroup;
 			children = (
+				450B32BA25E8D3360017B61C /* Favorites+CoreDataClass.swift */,
+				450B32BB25E8D3360017B61C /* Favorites+CoreDataProperties.swift */,
+				450B32BF25E8D35F0017B61C /* DataManager.swift */,
 				457E87F125E646EC00F4D28F /* FlickrProject */,
 				457E87F025E646EC00F4D28F /* Products */,
 				531CC7A09A3DB75CB6B0FA1E /* Pods */,
@@ -97,7 +106,6 @@
 				B1538C6AB625572AB6B50527 /* Pods-FlickrProject.debug.xcconfig */,
 				47FF45E140E7ECF95A5A123D /* Pods-FlickrProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,7 +136,7 @@
 			);
 			name = FlickrProject;
 			packageProductDependencies = (
-				457E881F25E6A29900F4D28F /* SwiftPackageProductDependency */,
+				457E881F25E6A29900F4D28F /* Kingfisher */,
 			);
 			productName = FlickrProject;
 			productReference = 457E87EF25E646EC00F4D28F /* FlickrProject.app */;
@@ -158,7 +166,7 @@
 			);
 			mainGroup = 457E87E625E646EC00F4D28F;
 			packageReferences = (
-				457E881E25E6A29900F4D28F /* RemoteSwiftPackageReference */,
+				457E881E25E6A29900F4D28F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 457E87F025E646EC00F4D28F /* Products */;
 			projectDirPath = "";
@@ -230,11 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				457E881225E653C100F4D28F /* SearchViewController.swift in Sources */,
+				450B32BD25E8D3360017B61C /* Favorites+CoreDataProperties.swift in Sources */,
 				457E880B25E6475800F4D28F /* Model.swift in Sources */,
 				457E881C25E69D7800F4D28F /* Network.swift in Sources */,
 				457E87FD25E646EC00F4D28F /* FlickrProject.xcdatamodeld in Sources */,
 				457E881525E6541D00F4D28F /* ImageCollectionViewCell.swift in Sources */,
+				450B32BC25E8D3360017B61C /* Favorites+CoreDataClass.swift in Sources */,
 				457E87F725E646EC00F4D28F /* ViewController.swift in Sources */,
+				450B32C025E8D35F0017B61C /* DataManager.swift in Sources */,
 				457E87F325E646EC00F4D28F /* AppDelegate.swift in Sources */,
 				457E87F525E646EC00F4D28F /* SceneDelegate.swift in Sources */,
 			);
@@ -442,7 +453,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		457E881E25E6A29900F4D28F /* RemoteSwiftPackageReference */ = {
+		457E881E25E6A29900F4D28F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -453,9 +464,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		457E881F25E6A29900F4D28F /* SwiftPackageProductDependency */ = {
+		457E881F25E6A29900F4D28F /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 457E881E25E6A29900F4D28F /* RemoteSwiftPackageReference */;
+			package = 457E881E25E6A29900F4D28F /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
