@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct NetworkImage {
+class NetworkImage {
     
     static func downloadImage(url: URL, handler: @escaping (UIImage?) -> ()) {
         
@@ -25,4 +25,6 @@ struct NetworkImage {
         
         task.resume()
     }
+    
+    
 }

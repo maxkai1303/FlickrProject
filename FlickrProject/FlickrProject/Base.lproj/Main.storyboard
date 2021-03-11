@@ -12,7 +12,7 @@
         <!--搜尋-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickrProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="FlickrProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JkE-eT-xaZ"/>
+                                    <action selector="searchBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieI-CZ-xtG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,9 +67,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="搜尋" id="yGk-aw-i4N"/>
                     <connections>
-                        <outlet property="insertPer" destination="DlS-du-BQv" id="IhG-Et-VuW"/>
-                        <outlet property="insertText" destination="ywV-D2-J3P" id="Q9z-9k-YTY"/>
-                        <outlet property="searchBTN" destination="IWe-fC-dIV" id="hma-KA-aeG"/>
+                        <outlet property="insertPerTextField" destination="DlS-du-BQv" id="3Sy-1c-mOs"/>
+                        <outlet property="insertWordTextField" destination="ywV-D2-J3P" id="KLd-3O-z6N"/>
+                        <outlet property="searchBtn" destination="IWe-fC-dIV" id="jQO-Rq-FQh"/>
                         <segue destination="KAH-Ks-x2U" kind="show" identifier="showImage" id="u7t-OP-4aA"/>
                     </connections>
                 </viewController>
