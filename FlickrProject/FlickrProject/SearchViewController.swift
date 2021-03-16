@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
         
         addPullRefresh()
         
-        getData(searchText: getSearchText, perPage: getPerPage, page: goPage)
+        getSearchData()
         
         
         imageCollection.refresh.footer.addRefreshClosure {
@@ -35,7 +35,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
                 
                 self.goPage += 1
                 
-                self.getData(searchText: self.getSearchText, perPage: self.getPerPage, page: self.goPage)
+                self.getSearchData()
                 
             } else if self.goPage == self.totalPage {
                 
@@ -47,8 +47,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
     }
     
     var photos = [Photo]()
-    
-    let flickrKey = "a370d6164f42e6950ea2392a0e587ac5"
     
     private var totalPage: Int = 1
     private var goPage: Int = 1
@@ -63,29 +61,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
         
     }
     
-    
-    func getData(searchText: String, perPage: String, page: Int) {
-        
-        let url = URL(string: "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(flickrKey)&text=\(searchText)&per_page=\(perPage)&format=json&nojsoncallback=1&page=\(page)")
-        
-        print("搜尋這個ＵＲＬ：", url!)
-        
-        let task = URLSession.shared.dataTask(with: url!){ (data, response, error) in
-            
-            if let data = data, let searchData = try? JSONDecoder().decode(Search.self, from: data) {
-                
-                self.photos.append(contentsOf: searchData.photos.photo)
-                self.totalPage = searchData.photos.pages
-                
-                DispatchQueue.main.async {
-                    
-                    self.imageCollection.reloadData()
-                }
-            }
-        }
-        task.resume()
-    }
-    
     @objc func reloadData() {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
@@ -95,7 +70,18 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
             self.photos = []
             self.goPage = 1
             
-            self.getData(searchText: self.getSearchText, perPage: self.getPerPage, page: self.goPage)
+            self.getSearchData()
+        }
+    }
+    
+    func getSearchData() {
+        
+        NetWorkManager.getData(searchText: getSearchText, perPage: getPerPage, page: goPage) { [weak self] (reslut) in
+            
+            self?.photos.append(contentsOf: reslut.photos.photo)
+            self?.totalPage = reslut.photos.pages
+            
+            self?.imageCollection.reloadData()
         }
     }
     

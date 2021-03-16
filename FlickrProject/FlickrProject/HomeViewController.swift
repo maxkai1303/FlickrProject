@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         searchBtn.isEnabled = false
         searchBtn.backgroundColor = UIColor.gray
